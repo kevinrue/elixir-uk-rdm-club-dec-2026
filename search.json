@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "notebooks/04-results.html",
+    "href": "notebooks/04-results.html",
+    "title": "4. Results",
+    "section": "",
+    "text": "Present the final findings in language suitable for your audience. Connect each claim to a table, figure, or source dataset."
+  },
+  {
+    "objectID": "notebooks/04-results.html#findings",
+    "href": "notebooks/04-results.html#findings",
+    "title": "4. Results",
+    "section": "",
+    "text": "Present the final findings in language suitable for your audience. Connect each claim to a table, figure, or source dataset."
+  },
+  {
+    "objectID": "notebooks/04-results.html#reproducibility",
+    "href": "notebooks/04-results.html#reproducibility",
+    "title": "4. Results",
+    "section": "Reproducibility",
+    "text": "Reproducibility\nRecord where the precomputed outputs came from, when they were generated, and which software or workflow versions were used. Include links to the source repository or archive when available."
+  },
+  {
+    "objectID": "notebooks/01-overview.html",
+    "href": "notebooks/01-overview.html",
+    "title": "1. Overview",
+    "section": "",
+    "text": "Introduce the question, data, and provenance for this showcase."
+  },
+  {
+    "objectID": "notebooks/01-overview.html#purpose",
+    "href": "notebooks/01-overview.html#purpose",
+    "title": "1. Overview",
+    "section": "",
+    "text": "Introduce the question, data, and provenance for this showcase."
+  },
+  {
+    "objectID": "notebooks/01-overview.html#precomputed-snapshot",
+    "href": "notebooks/01-overview.html#precomputed-snapshot",
+    "title": "1. Overview",
+    "section": "Precomputed snapshot",
+    "text": "Precomputed snapshot\n\n\n\nMeasure\nValue\n\n\n\n\nRecords\n1,248\n\n\nVariables\n12\n\n\nSnapshot date\n2026-11-01\n\n\n\nThese are illustrative placeholders. Replace them with values from the precomputed results used by your project."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Precomputed results",
+    "section": "",
+    "text": "Welcome to the ELIXIR-UK RDM Club notebook showcase. This site presents four Quarto notebooks built around precomputed results. The notebooks are rendered as part of the site build; readers do not need to run the analyses."
+  },
+  {
+    "objectID": "index.html#notebooks",
+    "href": "index.html#notebooks",
+    "title": "Precomputed results",
+    "section": "Notebooks",
+    "text": "Notebooks\n\nOverview — describe the dataset and provenance.\nExploration — show exploratory summaries.\nAnalysis — present the main analysis.\nResults — interpret and share the findings.\n\nReplace the starter text and example values in each notebook with your project content. Store reusable, precomputed inputs under data/ and figures under figures/."
+  },
+  {
+    "objectID": "notebooks/02-exploration.html",
+    "href": "notebooks/02-exploration.html",
+    "title": "2. Exploration",
+    "section": "",
+    "text": "Describe the key patterns visible in the precomputed exploratory summaries.\n\n# Example of displaying a precomputed table without rerunning its analysis:\n# readr::read_csv(\"../data/summary.csv\")\n\nAdd tables or figures generated before the website build. Keep their source files in data/ or figures/ and link to them here."
+  },
+  {
+    "objectID": "notebooks/02-exploration.html#summary",
+    "href": "notebooks/02-exploration.html#summary",
+    "title": "2. Exploration",
+    "section": "",
+    "text": "Describe the key patterns visible in the precomputed exploratory summaries.\n\n# Example of displaying a precomputed table without rerunning its analysis:\n# readr::read_csv(\"../data/summary.csv\")\n\nAdd tables or figures generated before the website build. Keep their source files in data/ or figures/ and link to them here."
+  },
+  {
+    "objectID": "notebooks/03-analysis.html",
+    "href": "notebooks/03-analysis.html",
+    "title": "3. Analysis",
+    "section": "",
+    "text": "Summarize the analysis method, software versions, and any important choices."
+  },
+  {
+    "objectID": "notebooks/03-analysis.html#method",
+    "href": "notebooks/03-analysis.html#method",
+    "title": "3. Analysis",
+    "section": "",
+    "text": "Summarize the analysis method, software versions, and any important choices."
+  },
+  {
+    "objectID": "notebooks/03-analysis.html#precomputed-result",
+    "href": "notebooks/03-analysis.html#precomputed-result",
+    "title": "3. Analysis",
+    "section": "Precomputed result",
+    "text": "Precomputed result\nInsert the main result and its uncertainty or limitations here. For example, link a saved figure with ![Caption](../figures/main-result.png)."
+  }
+]
