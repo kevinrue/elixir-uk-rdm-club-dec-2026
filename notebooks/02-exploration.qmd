@@ -1,0 +1,15 @@
+---
+title: "2. Exploration"
+---
+
+## Summary
+
+Describe the key patterns visible in the precomputed exploratory summaries.
+
+```{r}
+# Example of displaying a precomputed table without rerunning its analysis:
+# readr::read_csv("../data/summary.csv")
+```
+
+Add tables or figures generated before the website build. Keep their source
+files in `data/` or `figures/` and link to them here.

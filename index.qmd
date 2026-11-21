@@ -1,0 +1,18 @@
+---
+title: "Precomputed results"
+---
+
+Welcome to the ELIXIR-UK RDM Club notebook showcase. This site presents four
+Quarto notebooks built around **precomputed results**. The notebooks are
+rendered as part of the site build; readers do not need to run the analyses.
+
+## Notebooks
+
+1. [Overview](notebooks/01-overview.qmd) — describe the dataset and provenance.
+2. [Exploration](notebooks/02-exploration.qmd) — show exploratory summaries.
+3. [Analysis](notebooks/03-analysis.qmd) — present the main analysis.
+4. [Results](notebooks/04-results.qmd) — interpret and share the findings.
+
+Replace the starter text and example values in each notebook with your project
+content. Store reusable, precomputed inputs under `data/` and figures under
+`figures/`.

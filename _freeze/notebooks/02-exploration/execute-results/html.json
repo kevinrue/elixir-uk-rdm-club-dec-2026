@@ -1,0 +1,15 @@
+{
+  "hash": "3b83c1a152d698e8126a80218bdc050a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"2. Exploration\"\n---\n\n## Summary\n\nDescribe the key patterns visible in the precomputed exploratory summaries.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Example of displaying a precomputed table without rerunning its analysis:\n# readr::read_csv(\"../data/summary.csv\")\n```\n:::\n\n\nAdd tables or figures generated before the website build. Keep their source\nfiles in `data/` or `figures/` and link to them here.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

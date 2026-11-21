@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ELIXIR-UK RDM Club | December 2026"
+  description: "Four notebooks showcasing precomputed results."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Notebooks
+        menu:
+          - href: notebooks/01-overview.qmd
+            text: "1. Overview"
+          - href: notebooks/02-exploration.qmd
+            text: "2. Exploration"
+          - href: notebooks/03-analysis.qmd
+            text: "3. Analysis"
+          - href: notebooks/04-results.qmd
+            text: "4. Results"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    link-external-newwindow: true
+
+execute:
+  freeze: true
+  cache: false
