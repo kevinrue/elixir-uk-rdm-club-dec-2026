@@ -1,0 +1,15 @@
+{
+  "hash": "f16bb962c1024afebcdfc49b6b62dde0",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Breakout room - First-time visitor\"\n---\n\n## Scenario\n\n**First-time visitor**: you’ve been told a dataset is available from Bioconductor. Can you find it, get it, open it and use it?\n\n### The dataset\n\n> \"Zeisel 2015 is one of the most beloved datasets in the [Orchestrating Single-Cell Analysis with Bioconductor](https://bioconductor.org/books/release/OSCA/) (OSCA) book\".\n\nUsage in OSCA book: <https://bioconductor.org/books/release/OSCA.workflows/zeisel-mouse-brain-strt-seq.html>\n\nPublished article: <https://doi.org/10.1126/science.aaa1934>\n\n## Precomputed snapshot\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

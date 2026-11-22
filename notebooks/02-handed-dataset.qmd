@@ -1,0 +1,47 @@
+---
+title: "Breakout room - Handed a dataset"
+---
+
+## Scenario
+
+**Handed a dataset**: you’ve received data from Bioconductor’s ExperimentHub. What metadata or provenance would you expect that isn’t there?
+
+## The dataset
+
+> "All scRNAseq datasets have the import scripts in the package source code, e.g., <https://github.com/LTLA/scRNAseq/blob/master/scripts/zeisel-brain-2015/2023-12-14.Rmd>"
+
+## Load R packages
+
+```{r}
+suppressPackageStartupMessages(library(scRNAseq))
+```
+
+## Fetch data
+
+```{r}
+sce.zeisel <- ZeiselBrainData(
+  ensembl = FALSE, # use gene symbols rather than Ensembl identifiers
+  location = TRUE, # do not include genomic coordinates
+  legacy = FALSE   # pull data from gypsum backend, not ExperimentHub
+)
+```
+
+## Display the object
+
+```{r}
+sce.zeisel
+```
+
+## Display gene medata
+
+```{r}
+rowData(sce.zeisel)
+```
+ 
+## Display sample metadata
+
+Single-cell data: one sample is one cell.
+
+```{r}
+colData(sce.zeisel)
+```
