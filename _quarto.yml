@@ -9,12 +9,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - text: Notebooks
+      - text: Breakout rooms
         menu:
           - href: notebooks/01-first-time.qmd
-            text: "1. Overview"
+            text: "First-time visitor"
           - href: notebooks/02-handed-dataset.qmd
-            text: "2. Exploration"
+            text: "Handed a dataset"
           - href: notebooks/03-analysis.qmd
             text: "3. Analysis"
           - href: notebooks/04-results.qmd
