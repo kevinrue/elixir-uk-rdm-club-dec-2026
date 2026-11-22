@@ -20,8 +20,8 @@ suppressPackageStartupMessages(library(scRNAseq))
 
 ```{r}
 sce.zeisel <- ZeiselBrainData(
-  ensembl = FALSE, # use gene symbols rather than Ensembl identifiers
-  location = TRUE, # do not include genomic coordinates
+  ensembl = TRUE, # use Ensembl identifiers rather than gene symbols (default: FALSE)
+  location = TRUE, # include genomic coordinates (default: FALSE)
   legacy = FALSE   # pull data from gypsum backend, not ExperimentHub
 )
 ```
@@ -32,16 +32,72 @@ sce.zeisel <- ZeiselBrainData(
 sce.zeisel
 ```
 
+This is a Bioconductor [SingleCellExperiment](https://bioconductor.org/packages/SingleCellExperiment/) object.
+
+## Assay names
+
+```{r}
+assayNames(sce.zeisel)
+```
+
+## Assays
+
+All the assays in a `SingleCellExperiment`object have the same dimensions (rows, columns).
+
+This object contains a single assay.
+
+We show the first 10 rows (genes) and first 10 columns (cells) to limit the output size.
+
+```{r}
+assay(sce.zeisel, "counts")[1:10, 1:10]
+```
+
+The full dimensions of the matrix are (rows, columns):
+
+```{r}
+dim(assay(sce.zeisel, "counts"))
+```
+
+## Row names
+
+Gene identifiers.
+
+```{r}
+head(rownames(sce.zeisel))
+```
+
+## Column names
+
+Cell identifiers.
+
+```{r}
+head(colnames(sce.zeisel))
+```
+
 ## Display gene medata
 
 ```{r}
 rowData(sce.zeisel)
 ```
- 
+
 ## Display sample metadata
 
 Single-cell data: one sample is one cell.
 
 ```{r}
 colData(sce.zeisel)
+```
+
+## Alternative experiment names
+
+```{r}
+altExpNames(sce.zeisel)
+```
+
+## Alternative Experiment: ERCC
+
+
+```{r}
+sce.ercc <- altExp(sce.zeisel, "ERCC")
+sce.ercc
 ```
