@@ -53,7 +53,7 @@
     "href": "index.html#notebooks",
     "title": "Precomputed results",
     "section": "Notebooks",
-    "text": "Notebooks\n\nFirst-time visitor\nHanded a dataset\nAnalysis — present the main analysis.\nResults — interpret and share the findings."
+    "text": "Notebooks\n\nFirst-time visitor\nHanded a dataset\nRedistributing data\nResults — interpret and share the findings."
   },
   {
     "objectID": "notebooks/01-first-time.html",
@@ -208,5 +208,33 @@
     "title": "Breakout room - Handed a dataset",
     "section": "Sample metadata",
     "text": "Sample metadata\nSingle-cell data: one sample is one cell.\n\ncolData(sce.zeisel)\n\nDataFrame with 3005 rows and 9 columns\n                       tissue   group # total mRNA mol      well       sex\n                  &lt;character&gt; &lt;numeric&gt;      &lt;numeric&gt; &lt;numeric&gt; &lt;numeric&gt;\n1772071015_C02       sscortex         1          21580        11         1\n1772071017_G12       sscortex         1          21748        95        -1\n1772071017_A05       sscortex         1          31642        33        -1\n1772071014_B06       sscortex         1          32916        42         1\n1772067065_H06       sscortex         1          21531        48         1\n...                       ...       ...            ...       ...       ...\n1772067059_B04 ca1hippocampus         9           4585        26        -1\n1772066097_D04 ca1hippocampus         9           2559        28        -1\n1772063068_D01       sscortex         9           4015         4         1\n1772066098_A12 ca1hippocampus         9           2896        89        -1\n1772058148_F03       sscortex         9           4460        22         1\n                     age  diameter       level1class level2class\n               &lt;numeric&gt; &lt;numeric&gt;       &lt;character&gt; &lt;character&gt;\n1772071015_C02        21      0.00      interneurons       Int10\n1772071017_G12        20      9.56      interneurons       Int10\n1772071017_A05        20     11.10      interneurons        Int6\n1772071014_B06        21     11.70      interneurons       Int10\n1772067065_H06        25     11.00      interneurons        Int9\n...                  ...       ...               ...         ...\n1772067059_B04        23      9.85 endothelial-mural       Peric\n1772066097_D04        26     11.00 endothelial-mural        Vsmc\n1772063068_D01        26      8.63 endothelial-mural        Vsmc\n1772066098_A12        26      9.23 endothelial-mural        Vsmc\n1772058148_F03        26     10.40 endothelial-mural        Vsmc"
+  },
+  {
+    "objectID": "notebooks/03-redistributing-data.html",
+    "href": "notebooks/03-redistributing-data.html",
+    "title": "Breakout room - Redistributing data",
+    "section": "",
+    "text": "Redistributing data: Bioconductor passes on reference annotations and experimental data. Which RDM standard or practice would make the most difference if it adopted it?"
+  },
+  {
+    "objectID": "notebooks/03-redistributing-data.html#scenario",
+    "href": "notebooks/03-redistributing-data.html#scenario",
+    "title": "Breakout room - Redistributing data",
+    "section": "",
+    "text": "Redistributing data: Bioconductor passes on reference annotations and experimental data. Which RDM standard or practice would make the most difference if it adopted it?"
+  },
+  {
+    "objectID": "notebooks/03-redistributing-data.html#load-r-packages",
+    "href": "notebooks/03-redistributing-data.html#load-r-packages",
+    "title": "Breakout room - Redistributing data",
+    "section": "Load R packages",
+    "text": "Load R packages\n\nsuppressPackageStartupMessages(library(ExperimentHub))\nsuppressPackageStartupMessages(library(AnnotationHub))"
+  },
+  {
+    "objectID": "notebooks/03-redistributing-data.html#browsing-the-hubs",
+    "href": "notebooks/03-redistributing-data.html#browsing-the-hubs",
+    "title": "Breakout room - Redistributing data",
+    "section": "Browsing the hubs",
+    "text": "Browsing the hubs\n\nIn R\n\nehub &lt;- ExperimentHub()\n\nehub\n\nExperimentHub with 9157 records\n# snapshotDate(): 2026-04-21\n# $dataprovider: Eli and Edythe L. Broad Institute of Harvard and MIT, NCBI,...\n# $species: Homo sapiens, Mus musculus, Saccharomyces cerevisiae, Drosophila...\n# $rdataclass: SummarizedExperiment, data.frame, ExpressionSet, matrix, char...\n# additional mcols(): taxonomyid, genome, description,\n#   coordinate_1_based, maintainer, rdatadateadded, preparerclass, tags,\n#   rdatapath, sourceurl, sourcetype \n# retrieve records with, e.g., 'object[[\"EH1\"]]' \n\n            title                                                              \n  EH1     | RNA-Sequencing and clinical data for 7706 tumor samples from The...\n  EH166   | ERR188297                                                          \n  EH167   | ERR188088                                                          \n  EH168   | ERR188204                                                          \n  EH169   | ERR188317                                                          \n  ...       ...                                                                \n  EH10431 | vanPuyvelde_2022_LFQ_DDA_PEAKS_LFQ_report.csv                      \n  EH10432 | vanPuyvelde_2022_LFQ_DDA_sage_lfq.tsv                              \n  EH10433 | vanPuyvelde_2022_LFQ_DDA_sage_results.sage.tsv                     \n  EH10434 | vanPuyvelde_2022_LFQ_DIA_DIANN_report.parquet                      \n  EH10435 | vanPuyvelde_2022_LFQ_DIA_DIANN_report.tsv                          \n\n\n\nahub &lt;- AnnotationHub()\n\nahub\n\nAnnotationHub with 71086 records\n# snapshotDate(): 2026-04-23\n# $dataprovider: Ensembl, BroadInstitute, UCSC, ftp://ftp.ncbi.nlm.nih.gov/g...\n# $species: Homo sapiens, Mus musculus, Drosophila melanogaster, Rattus norv...\n# $rdataclass: GRanges, TwoBitFile, BigWigFile, EnsDb, Rle, OrgDb, ChainFile...\n# additional mcols(): taxonomyid, genome, description,\n#   coordinate_1_based, maintainer, rdatadateadded, preparerclass, tags,\n#   rdatapath, sourceurl, sourcetype \n# retrieve records with, e.g., 'object[[\"AH5012\"]]' \n\n             title                                   \n  AH5012   | Chromosome Band                         \n  AH5013   | STS Markers                             \n  AH5014   | FISH Clones                             \n  AH5015   | Recomb Rate                             \n  AH5016   | ENCODE Pilot                            \n  ...        ...                                     \n  AH122182 | Data.table for PubMed Author Information\n  AH122183 | Data.table for PMC                      \n  AH122184 | Data.table for MeSH (Descriptor)        \n  AH122185 | Data.table for MeSH (Qualifier)         \n  AH122186 | Data.table for MeSH (SCR)               \n\n\n\n\nOnline\nPackage: &lt;https://bioconductor.org/packages/BiocHubsShiny/ &gt;\nPrimary Shiny app: https://shiny.sph.cuny.edu/app/BiocHubsShiny/\n\nHTTPS certificate currently invalid. Request sent to admin.\n\nAlternative Post Connect Cloud instance: https://link-ny-biochubsshiny.share.connect.posit.cloud\n\n\nExported to a CSV file\nBioconductor only provides a SQLite file that contains metadata about the datasets available.\nUsers are expected to interact with it via R functions provided by the ExperimentHub and AnnotationHub packages.\nThe code below exports that table of metadata to a CSV file that you can download and browse in Excel.\n\nedata &lt;- as.data.frame(S4Vectors::mcols(ehub))\n\nif (!dir.exists(\"03-redistributing-data\"))\n    dir.create(\"03-redistributing-data\")\n\nwrite.csv(edata, \"03-redistributing-data/ExperimentHub_metadata.csv\", row.names = TRUE)\n\nDownload the output CSV file here\n\nadata &lt;- as.data.frame(S4Vectors::mcols(ahub))\n\nif (!dir.exists(\"03-redistributing-data\"))\n    dir.create(\"03-redistributing-data\")\n\nwrite.csv(adata, \"03-redistributing-data/AnnotationHub_metadata.csv\", row.names = TRUE)\n\nDownload the output CSV file here"
   }
 ]

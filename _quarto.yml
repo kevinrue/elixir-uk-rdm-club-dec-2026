@@ -15,8 +15,8 @@ website:
             text: "First-time visitor"
           - href: notebooks/02-handed-dataset.qmd
             text: "Handed a dataset"
-          - href: notebooks/03-analysis.qmd
-            text: "3. Analysis"
+          - href: notebooks/03-redistributing-data.qmd
+            text: "Redistributing data"
           - href: notebooks/04-results.qmd
             text: "4. Results"
 

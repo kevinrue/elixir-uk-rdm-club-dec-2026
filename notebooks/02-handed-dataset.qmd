@@ -4,11 +4,15 @@ title: "Breakout room - Handed a dataset"
 
 ## Scenario
 
-**Handed a dataset**: you’ve received data from Bioconductor’s ExperimentHub. What metadata or provenance would you expect that isn’t there?
+**Handed a dataset**:
+You’ve received data from Bioconductor’s ExperimentHub.
+What metadata or provenance would you expect that isn’t there?
 
-## The dataset
+## Example dataset
 
 > "All scRNAseq datasets have the import scripts in the package source code, e.g., <https://github.com/LTLA/scRNAseq/blob/master/scripts/zeisel-brain-2015/2023-12-14.Rmd>"
+
+More (single-cell) datasets: <https://bioconductor.org/packages/release/BiocViews.html#___SingleCellData>
 
 ## Load R packages
 

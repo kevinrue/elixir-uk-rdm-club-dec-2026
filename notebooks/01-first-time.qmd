@@ -4,15 +4,19 @@ title: "Breakout room - First-time visitor"
 
 ## Scenario
 
-**First-time visitor**: you’ve been told a dataset is available from Bioconductor. Can you find it, get it, open it and use it?
+**First-time visitor**:
+You’ve been told a dataset is available from Bioconductor.
+Can you find it, get it, open it and use it?
 
-### The dataset
+### Example dataset
 
 > "Zeisel 2015 is one of the most beloved datasets in the [Orchestrating Single-Cell Analysis with Bioconductor](https://bioconductor.org/books/release/OSCA/) (OSCA) book".
 
 Usage in OSCA book: <https://bioconductor.org/books/release/OSCA.workflows/zeisel-mouse-brain-strt-seq.html>
 
 Published article: <https://doi.org/10.1126/science.aaa1934>
+
+More (single-cell) datasets: <https://bioconductor.org/packages/release/BiocViews.html#___SingleCellData>
 
 ## Load R packages
 

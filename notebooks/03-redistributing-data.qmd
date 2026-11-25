@@ -1,0 +1,72 @@
+---
+title: "Breakout room - Redistributing data"
+---
+
+## Scenario
+
+**Redistributing data:**
+Bioconductor passes on reference annotations and experimental data.
+Which RDM standard or practice would make the most difference if it adopted it?
+
+## Load R packages
+
+```{r}
+suppressPackageStartupMessages(library(ExperimentHub))
+suppressPackageStartupMessages(library(AnnotationHub))
+```
+
+## Browsing the hubs
+
+### In R
+
+```{r}
+ehub <- ExperimentHub()
+
+ehub
+```
+
+```{r}
+ahub <- AnnotationHub()
+
+ahub
+```
+
+### Online
+
+Package: <https://bioconductor.org/packages/BiocHubsShiny/ >
+
+Primary Shiny app: <https://shiny.sph.cuny.edu/app/BiocHubsShiny/>
+
+- HTTPS certificate currently invalid. Request sent to admin.
+
+Alternative Post Connect Cloud instance: <https://link-ny-biochubsshiny.share.connect.posit.cloud>
+
+### Exported to a CSV file
+
+Bioconductor only provides a SQLite file that contains metadata about the datasets available.
+
+Users are expected to interact with it via R functions provided by the *ExperimentHub* and *AnnotationHub* packages.
+
+The code below exports that table of metadata to a CSV file that you can download and browse in Excel.
+
+```{r}
+edata <- as.data.frame(S4Vectors::mcols(ehub))
+
+if (!dir.exists("03-redistributing-data"))
+    dir.create("03-redistributing-data")
+
+write.csv(edata, "03-redistributing-data/ExperimentHub_metadata.csv", row.names = TRUE)
+```
+
+Download the output CSV file [here](03-redistributing-data/ExperimentHub_metadata.csv)
+
+```{r}
+adata <- as.data.frame(S4Vectors::mcols(ahub))
+
+if (!dir.exists("03-redistributing-data"))
+    dir.create("03-redistributing-data")
+
+write.csv(adata, "03-redistributing-data/AnnotationHub_metadata.csv", row.names = TRUE)
+```
+
+Download the output CSV file [here](03-redistributing-data/AnnotationHub_metadata.csv)
