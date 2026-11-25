@@ -36,7 +36,7 @@ hub
 
 ### Online
 
-Package: <https://bioconductor.org/packages/BiocHubsShiny/ >
+Package: <https://bioconductor.org/packages/BiocHubsShiny/>
 
 Primary Shiny app: <https://shiny.sph.cuny.edu/app/BiocHubsShiny/>
 
