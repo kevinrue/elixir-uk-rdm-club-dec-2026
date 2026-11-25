@@ -182,10 +182,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#assays" id="toc-assays" class="nav-link" data-scroll-target="#assays">Assays</a></li>
   <li><a href="#row-names" id="toc-row-names" class="nav-link" data-scroll-target="#row-names">Row names</a></li>
   <li><a href="#column-names" id="toc-column-names" class="nav-link" data-scroll-target="#column-names">Column names</a></li>
-  <li><a href="#display-gene-medata" id="toc-display-gene-medata" class="nav-link" data-scroll-target="#display-gene-medata">Display gene medata</a></li>
-  <li><a href="#display-sample-metadata" id="toc-display-sample-metadata" class="nav-link" data-scroll-target="#display-sample-metadata">Display sample metadata</a></li>
+  <li><a href="#gene-medata" id="toc-gene-medata" class="nav-link" data-scroll-target="#gene-medata">Gene medata</a></li>
+  <li><a href="#sample-metadata" id="toc-sample-metadata" class="nav-link" data-scroll-target="#sample-metadata">Sample metadata</a></li>
   <li><a href="#alternative-experiment-names" id="toc-alternative-experiment-names" class="nav-link" data-scroll-target="#alternative-experiment-names">Alternative experiment names</a></li>
-  <li><a href="#alternative-experiment-ercc" id="toc-alternative-experiment-ercc" class="nav-link" data-scroll-target="#alternative-experiment-ercc">Alternative Experiment: ERCC</a></li>
+  <li><a href="#alternative-experiment-ercc" id="toc-alternative-experiment-ercc" class="nav-link" data-scroll-target="#alternative-experiment-ercc">Alternative Experiment: ERCC</a>
+  <ul class="collapse">
+  <li><a href="#row-names-1" id="toc-row-names-1" class="nav-link" data-scroll-target="#row-names-1">Row names</a></li>
+  <li><a href="#feature-metadata" id="toc-feature-metadata" class="nav-link" data-scroll-target="#feature-metadata">Feature metadata</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -334,8 +338,8 @@ ENSMUSG00000037016  . .  . .  . . . 1 .  .</code></pre>
 </div>
 </div>
 </section>
-<section id="display-gene-medata" class="level2">
-<h2 class="anchored" data-anchor-id="display-gene-medata">Display gene medata</h2>
+<section id="gene-medata" class="level2">
+<h2 class="anchored" data-anchor-id="gene-medata">Gene medata</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowData</span>(sce.zeisel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -356,8 +360,8 @@ ENSMUSG00000065947        mito      mt-Nd4l</code></pre>
 </div>
 </div>
 </section>
-<section id="display-sample-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="display-sample-metadata">Display sample metadata</h2>
+<section id="sample-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="sample-metadata">Sample metadata</h2>
 <p>Single-cell data: one sample is one cell.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colData</span>(sce.zeisel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -421,8 +425,41 @@ mainExpName: NULL
 altExpNames(0):</code></pre>
 </div>
 </div>
+<section id="row-names-1" class="level3">
+<h3 class="anchored" data-anchor-id="row-names-1">Row names</h3>
+<p>Spike-in identifiers.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">rownames</span>(sce.ercc))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "ERCC-00002" "ERCC-00003" "ERCC-00004" "ERCC-00009" "ERCC-00019"
+[6] "ERCC-00022"</code></pre>
+</div>
+</div>
+</section>
+<section id="feature-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="feature-metadata">Feature metadata</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rowData</span>(sce.ercc)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>DataFrame with 57 rows and 3 columns
+              subgroup concentration  molecules
+           &lt;character&gt;     &lt;numeric&gt;  &lt;numeric&gt;
+ERCC-00002           D    15000.0000 4064945.01
+ERCC-00003           D      937.5000  254059.06
+ERCC-00004           A     7500.0000 2032472.51
+ERCC-00009           B      937.5000  254059.06
+ERCC-00019           A       29.2969    7939.35
+...                ...           ...        ...
+ERCC-00162           C       58.5938   15878.69
+ERCC-00163           D       14.6484    3969.67
+ERCC-00165           D       58.5938   15878.69
+ERCC-00170           A       14.6484    3969.67
+ERCC-00171           B     3750.0000 1016236.25</code></pre>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -74,13 +74,13 @@ Cell identifiers.
 head(colnames(sce.zeisel))
 ```
 
-## Display gene medata
+## Gene medata
 
 ```{r}
 rowData(sce.zeisel)
 ```
 
-## Display sample metadata
+## Sample metadata
 
 Single-cell data: one sample is one cell.
 
@@ -96,8 +96,21 @@ altExpNames(sce.zeisel)
 
 ## Alternative Experiment: ERCC
 
-
 ```{r}
 sce.ercc <- altExp(sce.zeisel, "ERCC")
 sce.ercc
+```
+
+### Row names
+
+Spike-in identifiers.
+
+```{r}
+head(rownames(sce.ercc))
+```
+
+### Feature metadata
+
+```{r}
+rowData(sce.ercc)
 ```

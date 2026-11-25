@@ -63,7 +63,7 @@ Download the output CSV file [here](01-data/ExperimentHub_metadata.csv)
 
 Reading [this chapter](https://bioconductor.org/books/release/OSCA.workflows/zeisel-mouse-brain-strt-seq.html) of the book "Orchestrating Single-Cell Analysis with Bioconductor", you see that the "Zeisel, 2015" dataset is available from Bioconductor.
 
-The book chapter includes a citation leading to the originl article https://doi.org/10.1126/science.aaa1934 
+The book chapter includes a citation leading to the originl article <https://doi.org/10.1126/science.aaa1934>.
 
 ### User experience
 
