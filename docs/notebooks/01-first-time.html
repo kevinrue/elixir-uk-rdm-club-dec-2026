@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -142,7 +177,17 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#the-dataset" id="toc-the-dataset" class="nav-link" data-scroll-target="#the-dataset">The dataset</a></li>
   </ul></li>
-  <li><a href="#precomputed-snapshot" id="toc-precomputed-snapshot" class="nav-link" data-scroll-target="#precomputed-snapshot">Precomputed snapshot</a></li>
+  <li><a href="#load-r-packages" id="toc-load-r-packages" class="nav-link" data-scroll-target="#load-r-packages">Load R packages</a></li>
+  <li><a href="#browsing-the-experimenthub" id="toc-browsing-the-experimenthub" class="nav-link" data-scroll-target="#browsing-the-experimenthub">Browsing the ExperimentHub</a>
+  <ul class="collapse">
+  <li><a href="#in-r" id="toc-in-r" class="nav-link" data-scroll-target="#in-r">In R</a></li>
+  <li><a href="#online" id="toc-online" class="nav-link" data-scroll-target="#online">Online</a></li>
+  <li><a href="#exported-to-a-csv-file" id="toc-exported-to-a-csv-file" class="nav-link" data-scroll-target="#exported-to-a-csv-file">Exported to a CSV file</a></li>
+  </ul></li>
+  <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
+  <ul class="collapse">
+  <li><a href="#user-experience" id="toc-user-experience" class="nav-link" data-scroll-target="#user-experience">User experience</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -180,10 +225,91 @@ ul.task-list li input[type="checkbox"] {
 <p>Published article: <a href="https://doi.org/10.1126/science.aaa1934" class="uri">https://doi.org/10.1126/science.aaa1934</a></p>
 </section>
 </section>
-<section id="precomputed-snapshot" class="level2">
-<h2 class="anchored" data-anchor-id="precomputed-snapshot">Precomputed snapshot</h2>
+<section id="load-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="load-r-packages">Load R packages</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(ExperimentHub))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="browsing-the-experimenthub" class="level2">
+<h2 class="anchored" data-anchor-id="browsing-the-experimenthub">Browsing the ExperimentHub</h2>
+<section id="in-r" class="level3">
+<h3 class="anchored" data-anchor-id="in-r">In R</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hub <span class="ot">&lt;-</span> <span class="fu">ExperimentHub</span>()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>hub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ExperimentHub with 9157 records
+# snapshotDate(): 2026-04-21
+# $dataprovider: Eli and Edythe L. Broad Institute of Harvard and MIT, NCBI,...
+# $species: Homo sapiens, Mus musculus, Saccharomyces cerevisiae, Drosophila...
+# $rdataclass: SummarizedExperiment, data.frame, ExpressionSet, matrix, char...
+# additional mcols(): taxonomyid, genome, description,
+#   coordinate_1_based, maintainer, rdatadateadded, preparerclass, tags,
+#   rdatapath, sourceurl, sourcetype 
+# retrieve records with, e.g., 'object[["EH1"]]' 
+
+            title                                                              
+  EH1     | RNA-Sequencing and clinical data for 7706 tumor samples from The...
+  EH166   | ERR188297                                                          
+  EH167   | ERR188088                                                          
+  EH168   | ERR188204                                                          
+  EH169   | ERR188317                                                          
+  ...       ...                                                                
+  EH10431 | vanPuyvelde_2022_LFQ_DDA_PEAKS_LFQ_report.csv                      
+  EH10432 | vanPuyvelde_2022_LFQ_DDA_sage_lfq.tsv                              
+  EH10433 | vanPuyvelde_2022_LFQ_DDA_sage_results.sage.tsv                     
+  EH10434 | vanPuyvelde_2022_LFQ_DIA_DIANN_report.parquet                      
+  EH10435 | vanPuyvelde_2022_LFQ_DIA_DIANN_report.tsv                          </code></pre>
+</div>
+</div>
+</section>
+<section id="online" class="level3">
+<h3 class="anchored" data-anchor-id="online">Online</h3>
+<p>Package: &lt;https://bioconductor.org/packages/BiocHubsShiny/ &gt;</p>
+<p>Primary Shiny app: <a href="https://shiny.sph.cuny.edu/app/BiocHubsShiny/" class="uri">https://shiny.sph.cuny.edu/app/BiocHubsShiny/</a></p>
+<ul>
+<li>HTTPS certificate currently invalid. Request sent to admin.</li>
+</ul>
+<p>Alternative Post Connect Cloud instance: <a href="https://link-ny-biochubsshiny.share.connect.posit.cloud" class="uri">https://link-ny-biochubsshiny.share.connect.posit.cloud</a></p>
+</section>
+<section id="exported-to-a-csv-file" class="level3">
+<h3 class="anchored" data-anchor-id="exported-to-a-csv-file">Exported to a CSV file</h3>
+<p>Bioconductor only provides a SQLite file that contains metadata about the datasets available.</p>
+<p>Users are expected to interact with it via R functions provided by the <em>ExperimentHub</em> package.</p>
+<p>The code below exports that table of metadata to a CSV file that you can download and browse in Excel.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>metadata <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(S4Vectors<span class="sc">::</span><span class="fu">mcols</span>(hub))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">dir.exists</span>(<span class="st">"01-data"</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">dir.create</span>(<span class="st">"01-data"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(metadata, <span class="st">"01-data/ExperimentHub_metadata.csv"</span>, <span class="at">row.names =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Download the output CSV file <a href="01-data/ExperimentHub_metadata.csv">here</a></p>
+</section>
+</section>
+<section id="activity" class="level2">
+<h2 class="anchored" data-anchor-id="activity">Activity</h2>
+<p>Reading <a href="https://bioconductor.org/books/release/OSCA.workflows/zeisel-mouse-brain-strt-seq.html">this chapter</a> of the book “Orchestrating Single-Cell Analysis with Bioconductor”, you see that the “Zeisel, 2015” dataset is available from Bioconductor.</p>
+<p>The book chapter includes a citation leading to the originl article https://doi.org/10.1126/science.aaa1934</p>
+<section id="user-experience" class="level3">
+<h3 class="anchored" data-anchor-id="user-experience">User experience</h3>
+<p>What information do you require before using the dataset redistributed by Bioconductor?</p>
+<p>How much provenance information do you expect Bioconductor to include in its own metadata?</p>
+<p>When is it sufficient for Bioconductor to link out to metadata stored elsewhere/upstream?</p>
+<p>How far back upstream shoud Bioconductor track provenance metadata? Published count matrices? FASTQ files?</p>
+<p>Do you see any gap when tracing data processing steps between the Bioconductor object given to you and the data produced by the experiment?</p>
+<p>Where do you look for information? Bioconductor website? Google? Favourite AI chatbot?</p>
+<p>How much information (that you care about) can you find out about the dataset without having to install and use R?</p>
+<p>How long does it take you to find instructions for accessing the dataset?</p>
+<p>How many of the <a href="https://www.gofair.foundation/fair-principles">FAIR criteria</a> does it pass?</p>
+<p>Where are you struggling?</p>
+<p>What information is missing from the bioconductor website? what could/should the core team or developers do better?</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -53,7 +53,7 @@
     "href": "index.html#notebooks",
     "title": "Precomputed results",
     "section": "Notebooks",
-    "text": "Notebooks\n\nFirst-time visitor\nHanded a dataset\nAnalysis — present the main analysis.\nResults — interpret and share the findings.\n\nReplace the starter text and example values in each notebook with your project content. Store reusable, precomputed inputs under data/ and figures under figures/."
+    "text": "Notebooks\n\nFirst-time visitor\nHanded a dataset\nAnalysis — present the main analysis.\nResults — interpret and share the findings."
   },
   {
     "objectID": "notebooks/01-first-time.html",
@@ -173,5 +173,26 @@
     "title": "Breakout room - Handed a dataset",
     "section": "Alternative Experiment: ERCC",
     "text": "Alternative Experiment: ERCC\n\nsce.ercc &lt;- altExp(sce.zeisel, \"ERCC\")\nsce.ercc\n\nclass: SingleCellExperiment \ndim: 57 3005 \nmetadata(0):\nassays(1): counts\nrownames(57): ERCC-00002 ERCC-00003 ... ERCC-00170 ERCC-00171\nrowData names(3): subgroup concentration molecules\ncolnames(3005): 1772071015_C02 1772071017_G12 ... 1772066098_A12\n  1772058148_F03\ncolData names(0):\nreducedDimNames(0):\nmainExpName: NULL\naltExpNames(0):"
+  },
+  {
+    "objectID": "notebooks/01-first-time.html#load-r-packages",
+    "href": "notebooks/01-first-time.html#load-r-packages",
+    "title": "Breakout room - First-time visitor",
+    "section": "Load R packages",
+    "text": "Load R packages\n\nsuppressPackageStartupMessages(library(ExperimentHub))"
+  },
+  {
+    "objectID": "notebooks/01-first-time.html#browsing-the-experimenthub",
+    "href": "notebooks/01-first-time.html#browsing-the-experimenthub",
+    "title": "Breakout room - First-time visitor",
+    "section": "Browsing the ExperimentHub",
+    "text": "Browsing the ExperimentHub\n\nIn R\n\nhub &lt;- ExperimentHub()\n\nhub\n\nExperimentHub with 9157 records\n# snapshotDate(): 2026-04-21\n# $dataprovider: Eli and Edythe L. Broad Institute of Harvard and MIT, NCBI,...\n# $species: Homo sapiens, Mus musculus, Saccharomyces cerevisiae, Drosophila...\n# $rdataclass: SummarizedExperiment, data.frame, ExpressionSet, matrix, char...\n# additional mcols(): taxonomyid, genome, description,\n#   coordinate_1_based, maintainer, rdatadateadded, preparerclass, tags,\n#   rdatapath, sourceurl, sourcetype \n# retrieve records with, e.g., 'object[[\"EH1\"]]' \n\n            title                                                              \n  EH1     | RNA-Sequencing and clinical data for 7706 tumor samples from The...\n  EH166   | ERR188297                                                          \n  EH167   | ERR188088                                                          \n  EH168   | ERR188204                                                          \n  EH169   | ERR188317                                                          \n  ...       ...                                                                \n  EH10431 | vanPuyvelde_2022_LFQ_DDA_PEAKS_LFQ_report.csv                      \n  EH10432 | vanPuyvelde_2022_LFQ_DDA_sage_lfq.tsv                              \n  EH10433 | vanPuyvelde_2022_LFQ_DDA_sage_results.sage.tsv                     \n  EH10434 | vanPuyvelde_2022_LFQ_DIA_DIANN_report.parquet                      \n  EH10435 | vanPuyvelde_2022_LFQ_DIA_DIANN_report.tsv                          \n\n\n\n\nOnline\nPackage: &lt;https://bioconductor.org/packages/BiocHubsShiny/ &gt;\nPrimary Shiny app: https://shiny.sph.cuny.edu/app/BiocHubsShiny/\n\nHTTPS certificate currently invalid. Request sent to admin.\n\nAlternative Post Connect Cloud instance: https://link-ny-biochubsshiny.share.connect.posit.cloud\n\n\nExported to a CSV file\nBioconductor only provides a SQLite file that contains metadata about the datasets available.\nUsers are expected to interact with it via R functions provided by the ExperimentHub package.\nThe code below exports that table of metadata to a CSV file that you can download and browse in Excel.\n\nmetadata &lt;- as.data.frame(S4Vectors::mcols(hub))\n\nif (!dir.exists(\"01-data\"))\n    dir.create(\"01-data\")\n\nwrite.csv(metadata, \"01-data/ExperimentHub_metadata.csv\", row.names = TRUE)\n\nDownload the output CSV file here"
+  },
+  {
+    "objectID": "notebooks/01-first-time.html#activity",
+    "href": "notebooks/01-first-time.html#activity",
+    "title": "Breakout room - First-time visitor",
+    "section": "Activity",
+    "text": "Activity\nReading this chapter of the book “Orchestrating Single-Cell Analysis with Bioconductor”, you see that the “Zeisel, 2015” dataset is available from Bioconductor.\nThe book chapter includes a citation leading to the originl article https://doi.org/10.1126/science.aaa1934\n\nUser experience\nWhat information do you require before using the dataset redistributed by Bioconductor?\nHow much provenance information do you expect Bioconductor to include in its own metadata?\nWhen is it sufficient for Bioconductor to link out to metadata stored elsewhere/upstream?\nHow far back upstream shoud Bioconductor track provenance metadata? Published count matrices? FASTQ files?\nDo you see any gap when tracing data processing steps between the Bioconductor object given to you and the data produced by the experiment?\nWhere do you look for information? Bioconductor website? Google? Favourite AI chatbot?\nHow much information (that you care about) can you find out about the dataset without having to install and use R?\nHow long does it take you to find instructions for accessing the dataset?\nHow many of the FAIR criteria does it pass?\nWhere are you struggling?\nWhat information is missing from the bioconductor website? what could/should the core team or developers do better?"
   }
 ]

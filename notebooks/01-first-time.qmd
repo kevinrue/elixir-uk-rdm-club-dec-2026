@@ -14,8 +14,77 @@ Usage in OSCA book: <https://bioconductor.org/books/release/OSCA.workflows/zeise
 
 Published article: <https://doi.org/10.1126/science.aaa1934>
 
-## Precomputed snapshot
+## Load R packages
 
 ```{r}
-
+suppressPackageStartupMessages(library(ExperimentHub))
 ```
+
+## Browsing the ExperimentHub
+
+### In R
+
+```{r}
+hub <- ExperimentHub()
+
+hub
+```
+
+### Online
+
+Package: <https://bioconductor.org/packages/BiocHubsShiny/ >
+
+Primary Shiny app: <https://shiny.sph.cuny.edu/app/BiocHubsShiny/>
+
+- HTTPS certificate currently invalid. Request sent to admin.
+
+Alternative Post Connect Cloud instance: <https://link-ny-biochubsshiny.share.connect.posit.cloud>
+
+### Exported to a CSV file
+
+Bioconductor only provides a SQLite file that contains metadata about the datasets available.
+
+Users are expected to interact with it via R functions provided by the *ExperimentHub* package.
+
+The code below exports that table of metadata to a CSV file that you can download and browse in Excel.
+
+```{r}
+metadata <- as.data.frame(S4Vectors::mcols(hub))
+
+if (!dir.exists("01-data"))
+    dir.create("01-data")
+
+write.csv(metadata, "01-data/ExperimentHub_metadata.csv", row.names = TRUE)
+```
+
+Download the output CSV file [here](01-data/ExperimentHub_metadata.csv)
+
+## Activity
+
+Reading [this chapter](https://bioconductor.org/books/release/OSCA.workflows/zeisel-mouse-brain-strt-seq.html) of the book "Orchestrating Single-Cell Analysis with Bioconductor", you see that the "Zeisel, 2015" dataset is available from Bioconductor.
+
+The book chapter includes a citation leading to the originl article https://doi.org/10.1126/science.aaa1934 
+
+### User experience
+
+What information do you require before using the dataset redistributed by Bioconductor?
+
+How much provenance information do you expect Bioconductor to include in its own metadata?
+
+When is it sufficient for Bioconductor to link out to metadata stored elsewhere/upstream?
+
+How far back upstream shoud Bioconductor track provenance metadata? Published count matrices? FASTQ files?
+
+Do you see any gap when tracing data processing steps between the Bioconductor object given to you and the data produced by the experiment?
+
+Where do you look for information? Bioconductor website? Google? Favourite AI chatbot?
+
+How much information (that you care about) can you find out about the dataset without having to install and use R?
+
+How long does it take you to find instructions for accessing the dataset?
+
+How many of the [FAIR criteria](https://www.gofair.foundation/fair-principles) does it pass?
+
+Where are you struggling?
+
+What information is missing from the bioconductor website? what could/should the core team or developers do better?

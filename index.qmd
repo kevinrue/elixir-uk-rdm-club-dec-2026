@@ -14,7 +14,3 @@ The notebooks are rendered as part of the site build; readers do not need to run
 2. [Handed a dataset](notebooks/02-handed-dataset.qmd)
 3. [Analysis](notebooks/03-analysis.qmd) — present the main analysis.
 4. [Results](notebooks/04-results.qmd) — interpret and share the findings.
-
-Replace the starter text and example values in each notebook with your project
-content. Store reusable, precomputed inputs under `data/` and figures under
-`figures/`.
