@@ -88,7 +88,7 @@
     "href": "notebooks/01-first-time.html#activity",
     "title": "Breakout room - First-time visitor",
     "section": "Activity",
-    "text": "Activity\nReading this chapter of the book “Orchestrating Single-Cell Analysis with Bioconductor”, you see that the “Zeisel, 2015” dataset is available from Bioconductor.\nThe book chapter includes a citation leading to the originl article https://doi.org/10.1126/science.aaa1934.\n\nUser experience\nWhat information do you require before using the dataset redistributed by Bioconductor?\nHow much provenance information do you expect Bioconductor to include in its own metadata?\nWhen is it sufficient for Bioconductor to link out to metadata stored elsewhere/upstream?\nHow far back upstream shoud Bioconductor track provenance metadata? Published count matrices? FASTQ files?\nDo you see any gap when tracing data processing steps between the Bioconductor object given to you and the data produced by the experiment?\nWhere do you look for information? Bioconductor website? Google? Favourite AI chatbot?\nHow much information (that you care about) can you find out about the dataset without having to install and use R?\nHow long does it take you to find instructions for accessing the dataset?\nHow many of the FAIR criteria does it pass?\nWhere are you struggling?\nWhat information is missing from the bioconductor website? what could/should the core team or developers do better?"
+    "text": "Activity\nReading this chapter of the book “Orchestrating Single-Cell Analysis with Bioconductor”, you see that the “Zeisel, 2015” dataset is available from Bioconductor.\nThe book chapter includes a citation leading to the original article https://doi.org/10.1126/science.aaa1934.\n\nUser experience\nWhat information do you require before using the dataset redistributed by Bioconductor?\nHow much provenance information do you expect Bioconductor to include in its own metadata?\nWhen is it sufficient for Bioconductor to link out to metadata stored elsewhere/upstream?\nHow far back upstream should Bioconductor track provenance metadata? Published count matrices? FASTQ files?\nDo you see any gap when tracing data processing steps between the Bioconductor object given to you and the data produced by the experiment?\nWhere do you look for information? Bioconductor website? Google? Favourite AI chatbot?\nHow much information (that you care about) can you find out about the dataset without having to install and use R?\nHow long does it take you to find instructions for accessing the dataset?\nHow many of the FAIR criteria does it pass?\nWhere are you struggling?\nWhat information is missing from the bioconductor website? what could/should the core team or developers do better?"
   },
   {
     "objectID": "notebooks/02-handed-dataset.html",
@@ -243,5 +243,12 @@
     "title": "Breakout room - Handed a dataset",
     "section": "Example dataset",
     "text": "Example dataset\n\n“All scRNAseq datasets have the import scripts in the package source code, e.g., https://github.com/LTLA/scRNAseq/blob/master/scripts/zeisel-brain-2015/2023-12-14.Rmd”\n\nMore (single-cell) datasets: https://bioconductor.org/packages/release/BiocViews.html#___SingleCellData"
+  },
+  {
+    "objectID": "notebooks/02-handed-dataset.html#gene-metadata",
+    "href": "notebooks/02-handed-dataset.html#gene-metadata",
+    "title": "Breakout room - Handed a dataset",
+    "section": "Gene metadata",
+    "text": "Gene metadata\n\nrowData(sce.zeisel)\n\nDataFrame with 18441 rows and 2 columns\n                   featureType originalName\n                   &lt;character&gt;  &lt;character&gt;\nENSMUSG00000029669  endogenous      Tspan12\nENSMUSG00000046982  endogenous        Tshz1\nENSMUSG00000039735  endogenous       Fnbp1l\nENSMUSG00000033453  endogenous     Adamts15\nENSMUSG00000046798  endogenous       Cldn12\n...                        ...          ...\nENSMUSG00000064354        mito       mt-Co2\nENSMUSG00000064351        mito       mt-Co1\nENSMUSG00000064339        mito      mt-Rnr2\nENSMUSG00000064337        mito      mt-Rnr1\nENSMUSG00000065947        mito      mt-Nd4l"
   }
 ]

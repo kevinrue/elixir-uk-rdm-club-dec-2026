@@ -67,7 +67,7 @@ Download the output CSV file [here](01-data/ExperimentHub_metadata.csv)
 
 Reading [this chapter](https://bioconductor.org/books/release/OSCA.workflows/zeisel-mouse-brain-strt-seq.html) of the book "Orchestrating Single-Cell Analysis with Bioconductor", you see that the "Zeisel, 2015" dataset is available from Bioconductor.
 
-The book chapter includes a citation leading to the originl article <https://doi.org/10.1126/science.aaa1934>.
+The book chapter includes a citation leading to the original article <https://doi.org/10.1126/science.aaa1934>.
 
 ### User experience
 
@@ -77,7 +77,7 @@ How much provenance information do you expect Bioconductor to include in its own
 
 When is it sufficient for Bioconductor to link out to metadata stored elsewhere/upstream?
 
-How far back upstream shoud Bioconductor track provenance metadata? Published count matrices? FASTQ files?
+How far back upstream should Bioconductor track provenance metadata? Published count matrices? FASTQ files?
 
 Do you see any gap when tracing data processing steps between the Bioconductor object given to you and the data produced by the experiment?
 

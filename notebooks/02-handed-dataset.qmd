@@ -78,7 +78,7 @@ Cell identifiers.
 head(colnames(sce.zeisel))
 ```
 
-## Gene medata
+## Gene metadata
 
 ```{r}
 rowData(sce.zeisel)
