@@ -22,3 +22,8 @@ Leave settings to default and click "Launch Session".
 
 **Your session may take a few minutes to launch.**
 Consider launching it during the presentation so that it is ready to use when you need it during the breakout session.
+
+When the session is ready, click the button "Open".
+
+Most of the packages that you need should be pre-installed.
+You may use `BiocManager::install()` to install any other package you wish to use.

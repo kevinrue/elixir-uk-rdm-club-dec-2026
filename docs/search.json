@@ -298,6 +298,6 @@
     "href": "extras/orchestra.html#how-to-use-orchestra-platform",
     "title": "Using the Orchestra Platform",
     "section": "How to use Orchestra Platform",
-    "text": "How to use Orchestra Platform\nIn your web browser, navigate to https://orchestraplatform.org/.\nClick on “Launch a workshop”.\nYou will be prompted to log in via a Google account.\nOnce logged in, click “New Session” in the top right corner.\nFind the workshop “Single-cell RNA-seq analysis with R/Bioconductor (Physalia 2026)”, and click “Launch”.\nLeave settings to default and click “Launch Session”.\nYour session may take a few minutes to launch. Consider launching it during the presentation so that it is ready to use when you need it during the breakout session."
+    "text": "How to use Orchestra Platform\nIn your web browser, navigate to https://orchestraplatform.org/.\nClick on “Launch a workshop”.\nYou will be prompted to log in via a Google account.\nOnce logged in, click “New Session” in the top right corner.\nFind the workshop “Single-cell RNA-seq analysis with R/Bioconductor (Physalia 2026)”, and click “Launch”.\nLeave settings to default and click “Launch Session”.\nYour session may take a few minutes to launch. Consider launching it during the presentation so that it is ready to use when you need it during the breakout session.\nWhen the session is ready, click the button “Open”.\nMost of the packages that you need should be pre-installed. You may use BiocManager::install() to install any other package you wish to use."
   }
 ]
