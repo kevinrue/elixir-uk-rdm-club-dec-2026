@@ -271,5 +271,33 @@
     "title": "Breakout room - Is Bioconductor FAIR?",
     "section": "Activity",
     "text": "Activity\nThe Bioconductor community has long emphasised interoperability between packages across its ecosystem, as well as support for standard bioinformatics file formats.\nWith the rapid development of new analytical methods, increasingly assisted by AI, ensuring that rich biological datasets can be shared and reused effectively is more important than ever.\nThe Bioconductor FAIR data sharing working group was established to develop recommendations, documentation, and training materials for users, particularly those new to Bioconductor. It also provides a forum to explore future directions for software development, both within Bioconductor and across other open-source communities, to support the sharing and reuse of rich datasets.\n\nUser experience\nConsider the first vignette, Saving Bioconductor Objects for Sharing, from the savingBiocObjects workflow package.\n\nAccessibility: How approachable is this vignette for someone new to R or Bioconductor?\nPrerequisites: What knowledge or skills might beginners need before working through it?\nSignposting: What additional resources, documentation, or tools should the vignette point users towards?\nLearning path: Where does this vignette fit in a user’s learning journey, and what should they already know or be able to do before engaging with it?"
+  },
+  {
+    "objectID": "index.html#extras",
+    "href": "index.html#extras",
+    "title": "Precomputed results",
+    "section": "Extras",
+    "text": "Extras\n\nUsing the Orchestra Platform"
+  },
+  {
+    "objectID": "extras/orchestra.html",
+    "href": "extras/orchestra.html",
+    "title": "Using the Orchestra Platform",
+    "section": "",
+    "text": "Orchestra spins up isolated, time-limited RStudio and JupyterLab sessions on Kubernetes, enabling users to click a link and start working in the browser, with nothing to install."
+  },
+  {
+    "objectID": "extras/orchestra.html#what-is-orchestra-platform",
+    "href": "extras/orchestra.html#what-is-orchestra-platform",
+    "title": "Using the Orchestra Platform",
+    "section": "",
+    "text": "Orchestra spins up isolated, time-limited RStudio and JupyterLab sessions on Kubernetes, enabling users to click a link and start working in the browser, with nothing to install."
+  },
+  {
+    "objectID": "extras/orchestra.html#how-to-use-orchestra-platform",
+    "href": "extras/orchestra.html#how-to-use-orchestra-platform",
+    "title": "Using the Orchestra Platform",
+    "section": "How to use Orchestra Platform",
+    "text": "How to use Orchestra Platform\nIn your web browser, navigate to https://orchestraplatform.org/.\nClick on “Launch a workshop”.\nYou will be prompted to log in via a Google account.\nOnce logged in, click “New Session” in the top right corner.\nFind the workshop “Single-cell RNA-seq analysis with R/Bioconductor (Physalia 2026)”, and click “Launch”.\nLeave settings to default and click “Launch Session”.\nYour session may take a few minutes to launch. Consider launching it during the presentation so that it is ready to use when you need it during the breakout session."
   }
 ]

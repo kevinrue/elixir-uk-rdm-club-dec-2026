@@ -1,0 +1,24 @@
+---
+title: "Using the Orchestra Platform"
+---
+
+## What is Orchestra Platform?
+
+Orchestra spins up isolated, time-limited RStudio and JupyterLab sessions on Kubernetes, enabling users to click a link and start working in the browser, with nothing to install.
+
+## How to use Orchestra Platform
+
+In your web browser, navigate to <https://orchestraplatform.org/>.
+
+Click on "Launch a workshop".
+
+You will be prompted to log in via a Google account.
+
+Once logged in, click "New Session" in the top right corner.
+
+Find the workshop "Single-cell RNA-seq analysis with R/Bioconductor (Physalia 2026)", and click "Launch".
+
+Leave settings to default and click "Launch Session".
+
+**Your session may take a few minutes to launch.**
+Consider launching it during the presentation so that it is ready to use when you need it during the breakout session.

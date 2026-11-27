@@ -19,6 +19,10 @@ website:
             text: "Redistributing data"
           - href: notebooks/04-is-bioc-fair.qmd
             text: "Is Bioconductor FAIR?"
+      - text: Extras
+        menu:
+          - href: extras/orchestra.qmd
+            text: Using the Orchestra Platform 
 
 format:
   html:
