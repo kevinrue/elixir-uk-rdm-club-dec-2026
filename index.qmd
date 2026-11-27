@@ -17,4 +17,4 @@ The notebooks are rendered as part of the site build; readers do not need to run
 
 ## Extras
 
-- [Using the Orchestra Platform](https://orchestraplatform.org/)
+- [Using the Orchestra Platform](extras/orchestra.qmd)
