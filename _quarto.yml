@@ -17,8 +17,8 @@ website:
             text: "Handed a dataset"
           - href: notebooks/03-redistributing-data.qmd
             text: "Redistributing data"
-          - href: notebooks/04-results.qmd
-            text: "4. Results"
+          - href: notebooks/04-is-bioc-fair.qmd
+            text: "Is Bioconductor FAIR?"
 
 format:
   html:

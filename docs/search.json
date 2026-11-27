@@ -53,7 +53,7 @@
     "href": "index.html#notebooks",
     "title": "Precomputed results",
     "section": "Notebooks",
-    "text": "Notebooks\n\nFirst-time visitor\nHanded a dataset\nRedistributing data\nResults — interpret and share the findings."
+    "text": "Notebooks\n\nFirst-time visitor\nHanded a dataset\nRedistributing data\nIs Bioconductor FAIR?"
   },
   {
     "objectID": "notebooks/01-first-time.html",
@@ -250,5 +250,26 @@
     "title": "Breakout room - Handed a dataset",
     "section": "Gene metadata",
     "text": "Gene metadata\n\nrowData(sce.zeisel)\n\nDataFrame with 18441 rows and 2 columns\n                   featureType originalName\n                   &lt;character&gt;  &lt;character&gt;\nENSMUSG00000029669  endogenous      Tspan12\nENSMUSG00000046982  endogenous        Tshz1\nENSMUSG00000039735  endogenous       Fnbp1l\nENSMUSG00000033453  endogenous     Adamts15\nENSMUSG00000046798  endogenous       Cldn12\n...                        ...          ...\nENSMUSG00000064354        mito       mt-Co2\nENSMUSG00000064351        mito       mt-Co1\nENSMUSG00000064339        mito      mt-Rnr2\nENSMUSG00000064337        mito      mt-Rnr1\nENSMUSG00000065947        mito      mt-Nd4l"
+  },
+  {
+    "objectID": "notebooks/04-is-bioc-fair.html",
+    "href": "notebooks/04-is-bioc-fair.html",
+    "title": "Breakout room - Is Bioconductor FAIR?",
+    "section": "",
+    "text": "The Bioconductor FAIR data sharing working group:\n\nBioconductor Working Groups: Guidelines and activities provides a brief description of the working group\n#fair-data-sharing is the dedicated communication channel on the Bioconductor Zulip Chat https://chat.bioconductor.org/\n\nKey outputs to date:\n\nsavingBiocObjects workflow package\n\nVignette Saving Bioconductor Objects for Sharing"
+  },
+  {
+    "objectID": "notebooks/04-is-bioc-fair.html#scenario",
+    "href": "notebooks/04-is-bioc-fair.html#scenario",
+    "title": "Breakout room - Is Bioconductor FAIR?",
+    "section": "",
+    "text": "The Bioconductor FAIR data sharing working group:\n\nBioconductor Working Groups: Guidelines and activities provides a brief description of the working group\n#fair-data-sharing is the dedicated communication channel on the Bioconductor Zulip Chat https://chat.bioconductor.org/\n\nKey outputs to date:\n\nsavingBiocObjects workflow package\n\nVignette Saving Bioconductor Objects for Sharing"
+  },
+  {
+    "objectID": "notebooks/04-is-bioc-fair.html#activity",
+    "href": "notebooks/04-is-bioc-fair.html#activity",
+    "title": "Breakout room - Is Bioconductor FAIR?",
+    "section": "Activity",
+    "text": "Activity\nThe Bioconductor community has long emphasised interoperability between packages across its ecosystem, as well as support for standard bioinformatics file formats.\nWith the rapid development of new analytical methods, increasingly assisted by AI, ensuring that rich biological datasets can be shared and reused effectively is more important than ever.\nThe Bioconductor FAIR data sharing working group was established to develop recommendations, documentation, and training materials for users, particularly those new to Bioconductor. It also provides a forum to explore future directions for software development, both within Bioconductor and across other open-source communities, to support the sharing and reuse of rich datasets.\n\nUser experience\nConsider the first vignette, Saving Bioconductor Objects for Sharing, from the savingBiocObjects workflow package.\n\nAccessibility: How approachable is this vignette for someone new to R or Bioconductor?\nPrerequisites: What knowledge or skills might beginners need before working through it?\nSignposting: What additional resources, documentation, or tools should the vignette point users towards?\nLearning path: Where does this vignette fit in a user’s learning journey, and what should they already know or be able to do before engaging with it?"
   }
 ]

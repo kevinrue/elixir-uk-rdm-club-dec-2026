@@ -1,0 +1,36 @@
+---
+title: "Breakout room - Is Bioconductor FAIR?"
+---
+
+## Scenario
+
+The Bioconductor **FAIR data sharing** working group:
+
+- [Bioconductor Working Groups: Guidelines and activities](https://workinggroups.bioconductor.org/currently-active-working-groups-committees.html#fair-data-sharing) provides a brief description of the working group
+
+- [#fair-data-sharing](https://community-bioc.zulipchat.com/#narrow/channel/609880-fair-data-sharing) is the dedicated communication channel on the Bioconductor Zulip Chat <https://chat.bioconductor.org/>
+
+Key outputs to date:
+
+- [savingBiocObjects](https://bioconductor.org/packages/devel/workflows/html/savingBiocObjects.html) workflow package
+  + Vignette [Saving Bioconductor Objects for Sharing](https://bioconductor.org/packages/release/workflows/vignettes/savingBiocObjects/inst/doc/savingBiocObjects.html)
+
+## Activity
+
+The Bioconductor community has long emphasised interoperability between packages across its ecosystem, as well as support for standard bioinformatics file formats.
+
+With the rapid development of new analytical methods, increasingly assisted by AI, ensuring that rich biological datasets can be shared and reused effectively is more important than ever.
+
+The Bioconductor FAIR data sharing working group was established to develop recommendations, documentation, and training materials for users, particularly those new to Bioconductor. It also provides a forum to explore future directions for software development, both within Bioconductor and across other open-source communities, to support the sharing and reuse of rich datasets.
+
+### User experience
+
+Consider the first vignette, [Saving Bioconductor Objects for Sharing](https://bioconductor.org/packages/release/workflows/vignettes/savingBiocObjects/inst/doc/savingBiocObjects.html), from the [savingBiocObjects](https://bioconductor.org/packages/devel/workflows/html/savingBiocObjects.html) workflow package.
+
+- **Accessibility:** How approachable is this vignette for someone new to R or Bioconductor?
+
+- **Prerequisites:** What knowledge or skills might beginners need before working through it?
+
+- **Signposting:** What additional resources, documentation, or tools should the vignette point users towards?
+
+- **Learning path:** Where does this vignette fit in a user's learning journey, and what should they already know or be able to do before engaging with it?
